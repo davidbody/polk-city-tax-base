@@ -93,6 +93,9 @@ plotCity <- function(df, city) {
     library(ggplot2)
     library(scales)
 
+    percent_residential <- df[df$city == city, c(1,2,3,7)]
+    percent_residential$percent <- percent_residential$residential / percent_residential$total
+
     city.without_totals <- df[df$city == city, -7]
 
     city.m <- melt(city.without_totals, id.vars = c("year", "city"))
@@ -102,7 +105,7 @@ plotCity <- function(df, city) {
     g <- g + scale_y_continuous(labels = dollar)
     g <- g + scale_x_continuous(breaks = years)
     g <- g + labs(title = city, y = "Assessed Property Value", x = "Year")
-#     g <- g + annotate("text", x = year, y = 100000000, label = "90%")
+    g <- g + geom_text(data = percent_residential, aes(x = year, y = residential, label = percent))
     return(g)
 }
 
