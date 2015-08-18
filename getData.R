@@ -77,8 +77,7 @@ readValues = function(year) {
         stop(paste(year, "is not a valid year"))
     }
 
-    df <- data.frame(city = agCities, year = year, residential = resValues, commercial = comValues, industrial = indValues, agricultural = agValues)
-    return(df)
+    data.frame(city = agCities, year = year, residential = resValues, commercial = comValues, industrial = indValues, agricultural = agValues)
 }
 
 df <- data.frame()
@@ -106,7 +105,7 @@ plotCity <- function(df, city) {
     g <- g + scale_x_continuous(breaks = years)
     g <- g + labs(title = city, y = "Assessed Property Value", x = "Year")
     g <- g + geom_text(data = percent_residential, aes(x = year, y = residential, label = percent))
-    return(g)
+    g
 }
 
 plotCity(df, "Polk City")
