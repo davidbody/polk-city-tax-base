@@ -56,18 +56,30 @@ readValues = function(year) {
     data.frame(city = agCities, year = year, residential = resValues, commercial = comValues, industrial = indValues, agricultural = agValues)
 }
 
-df <- data.frame()
-for(year in years) {
-    df <- rbind(df, readValues(year))
+data_file <- "./data/df.Rda"
+
+if(file.exists(data_file)) {
+    print("Loading df")
+    load(data_file)
+} else {
+    df <- data.frame()
+    for(year in years) {
+        df <- rbind(df, readValues(year))
+    }
+    save(df, file = data_file)
+}
+
+cities <- function(df) {
+    as.list(unique(as.character(df$city)))
 }
 
 df$total <- df$residential + df$commercial + df$industrial + df$agricultural
 
-plotCity <- function(df, city) {
-    library(reshape2)
-    library(ggplot2)
-    library(scales)
+library(reshape2)
+library(ggplot2)
+library(scales)
 
+plotCity <- function(city) {
     percent_residential <- df[df$city == city, c(1,2,3,7)]
     percent_residential$percent <- percent_residential$residential / percent_residential$total
 
@@ -91,4 +103,4 @@ plotCity <- function(df, city) {
     g
 }
 
-plotCity(df, "Polk City")
+plotCity("Polk City")
