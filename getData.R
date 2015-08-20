@@ -16,6 +16,8 @@ for(year in years) {
 library(xlsx)
 
 readValues = function(year) {
+    print(paste("Loading data for", year))
+
     fileName <- paste("./data/AbstractReconciliationPolk", year, ".xls", sep="")
 
     agData  <- read.xlsx(fileName, 1, stringsAsFactors = FALSE)
