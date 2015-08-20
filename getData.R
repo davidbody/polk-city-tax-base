@@ -97,14 +97,21 @@ plotCity <- function(df, city) {
 
     city.without_totals <- df[df$city == city, -7]
 
-    city.m <- melt(city.without_totals, id.vars = c("year", "city"))
+    city.m <- melt(city.without_totals, id.vars = c("year", "city"), variable.name = "prop_class")
 
-    g <- ggplot(city.m, aes(x = year, y = value, fill = variable))
+    g <- ggplot(city.m, aes(x = year, y = value, fill = prop_class))
     g <- g + geom_bar(stat="identity")
     g <- g + scale_y_continuous(labels = dollar)
     g <- g + scale_x_continuous(breaks = years)
     g <- g + labs(title = city, y = "Assessed Property Value", x = "Year")
-    g <- g + geom_text(data = percent_residential, aes(x = year, y = residential, label = percent))
+    g <- g + labs(fill = "Property Class")
+
+    for(year in years) {
+        r <- percent_residential[percent_residential$year == year, 3]
+        p <- percent_residential[percent_residential$year == year, 5] * 100
+        g <- g + annotate("text", x = year, y = r * .95, label = sprintf("%.1f %%", p))
+    }
+
     g
 }
 
