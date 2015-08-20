@@ -23,56 +23,30 @@ readValues = function(year) {
     comData <- read.xlsx(fileName, 4, stringsAsFactors = FALSE)
     indData <- read.xlsx(fileName, 6, stringsAsFactors = FALSE)
 
-#     print(paste("year", year, "\n"))
-
     if (year %in% 2008:2013) {
         agCities <- c(agData[34:52, 1], "Windsor Heights")
         agValues <- c(as.numeric(agData[34:52, 5]), 0)
-#         print("agCities\n")
-#         print(agCities)
-#         print("\n")
 
         resCities <- resData[35:54, 1]
         resValues <- as.numeric(resData[35:54, 4])
-#         print("resCities\n")
-#         print(resCities)
-#         print("\n")
 
         comCities <- comData[35:54, 1]
         comValues <- as.numeric(comData[35:54, 4])
-#         print("comCities\n")
-#         print(comCities)
-#         print("\n")
 
         indCities <- indData[34:53, 1]
         indValues <- as.numeric(indData[34:53, 4])
-#         print("indCities\n")
-#         print(indCities)
-#         print("\n")
     } else if (year %in% 2014:2015) {
         agCities <- agData[49:68, 1]
         agValues <- as.numeric(agData[49:68, 5])
-#         print("agCities\n")
-#         print(agCities)
-#         print("\n")
 
         resCities <- resData[48:67, 1]
         resValues <- as.numeric(resData[48:67, 4])
-#         print("resCities\n")
-#         print(resCities)
-#         print("\n")
 
         comCities <- comData[48:67, 1]
         comValues <- as.numeric(comData[48:67, 4])
-#         print("comCities\n")
-#         print(comCities)
-#         print("\n")
 
         indCities <- indData[49:68, 1]
         indValues <- as.numeric(indData[49:68, 4])
-#         print("indCities\n")
-#         print(indCities)
-#         print("\n")
     } else {
         stop(paste(year, "is not a valid year"))
     }
