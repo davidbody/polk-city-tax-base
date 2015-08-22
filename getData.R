@@ -1,4 +1,4 @@
-setwd("~/study/developing_data_products/assessor-data")
+setwd("~/study/developing_data_products/polk-city-tax-base")
 
 years <- 2008:2015
 
