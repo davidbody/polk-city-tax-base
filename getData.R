@@ -63,51 +63,12 @@ readValues = function(year) {
     data.frame(city = agCities, year = year, residential = resValues, commercial = comValues, industrial = indValues, agricultural = agValues)
 }
 
-data_file <- "./data/df.Rda"
+data_file <- "./data/prop_vals.Rda"
 
-if(file.exists(data_file)) {
-    print("Loading df")
-    load(data_file)
-} else {
-    df <- data.frame()
+if(!file.exists(data_file)) {
+    prop_vals <- data.frame()
     for(year in years) {
-        df <- rbind(df, readValues(year))
+        prop_vals <- rbind(prop_vals, readValues(year))
     }
-    save(df, file = data_file)
+    save(prop_vals, file = data_file)
 }
-
-cities <- function(df) {
-    as.list(unique(as.character(df$city)))
-}
-
-df$total <- df$residential + df$commercial + df$industrial + df$agricultural
-
-library(reshape2)
-library(ggplot2)
-library(scales)
-
-plotCity <- function(city) {
-    percent_residential <- df[df$city == city, c(1,2,3,7)]
-    percent_residential$percent <- percent_residential$residential / percent_residential$total
-
-    city.without_totals <- df[df$city == city, -7]
-
-    city.m <- melt(city.without_totals, id.vars = c("year", "city"), variable.name = "prop_class")
-
-    g <- ggplot(city.m, aes(x = year, y = value, fill = prop_class))
-    g <- g + geom_bar(stat="identity")
-    g <- g + scale_y_continuous(labels = dollar)
-    g <- g + scale_x_continuous(breaks = years)
-    g <- g + labs(title = city, y = "Assessed Property Value", x = "Year")
-    g <- g + labs(fill = "Property Class")
-
-    for(year in years) {
-        r <- percent_residential[percent_residential$year == year, 3]
-        p <- percent_residential[percent_residential$year == year, 5] * 100
-        g <- g + annotate("text", x = year, y = r * .95, label = sprintf("%.1f %%", p))
-    }
-
-    g
-}
-
-## plotCity("Polk City")
