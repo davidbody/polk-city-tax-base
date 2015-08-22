@@ -19,7 +19,7 @@ Iowa municipalities derive a significant portion of their income from property t
 For property tax purposes, property is classified as one of:
 
 * Residential
-* Commericial
+* Commercial
 * Industrial
 * Agricultural
 
@@ -50,7 +50,7 @@ Source: [Iowa Department of Revenue](https://tax.iowa.gov/equalization-and-rollb
 
 ## What's a healthy mix of property classes?
 
-Cities use tax revenue to provide essential services such as police and fire protection, roads, water and sewer to their residents. They also provide amenenties such as parks, libraries, and sports facilities.
+Cities use tax revenue to provide essential services such as police and fire protection, roads, water and sewer to their residents. They also provide amenities such as parks, libraries, and sports facilities.
 
 A tax base with a healthy mix of residential and non-residential property can mean more revenue available for amenities for two reasons:
 
