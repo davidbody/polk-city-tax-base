@@ -44,6 +44,13 @@ readValues = function(year) {
         resCities <- resData[48:67, 1]
         resValues <- as.numeric(resData[48:67, 4])
 
+        # Multiresidential class added 2015
+        if (year >= 2015) {
+            mrData <- read.xlsx(fileName, 5, stringsAsFactors = FALSE)
+            mrValues <- as.numeric(mrData[48:67, 4])
+            resValues <- resValues + mrValues
+        }
+
         comCities <- comData[48:67, 1]
         comValues <- as.numeric(comData[48:67, 4])
 
@@ -103,4 +110,4 @@ plotCity <- function(city) {
     g
 }
 
-plotCity("Polk City")
+## plotCity("Polk City")
