@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Is Polk City's tax base too dependent on residential property?</title>
+  <title>Is Polk City too dependent on residential property?</title>
   <meta charset="utf-8">
-  <meta name="description" content="Is Polk City's tax base too dependent on residential property?">
+  <meta name="description" content="Is Polk City too dependent on residential property?">
   <meta name="author" content="David W. Body">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Is Polk City's tax base too dependent on residential property?</h1>
+    <h1>Is Polk City too dependent on residential property?</h1>
     <h2>Course project for Developing Data Products</h2>
     <p>David W. Body<br/></p>
   </hgroup>
@@ -43,25 +43,85 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <p>Iowa municipalities derive a significant portion of their income from property taxes levied on real property.</p>
+
+<p>For property tax purposes, property is classified as one of:</p>
+
+<ul>
+<li>Residential</li>
+<li>Commericial</li>
+<li>Industrial</li>
+<li>Agricultural</li>
+</ul>
+
+<p>This project presents a way to compare the property tax bases of cities in Polk County, Iowa.</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Why does property classification matter?</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>In Iowa, property other than agricultural property is assessed at 100% of market value, and agricultural property is assessed at 100% of productivity and net earning capacity value.</p>
+
+<p>However, the value that is actually taxed is determined after applying &quot;rollbacks&quot; which vary over time and by property class. Here are the rollbacks for the 5 most recent years available.</p>
+
+<table>
+<tr><th>Year</th><th>Residential</th><th>Commercial</th><th>Industrial</th><th>Agricultural</th></tr>
+<tr><td>2010</td><td>48.5299%</td><td>100%</td><td>100%</td><td>69.0152%</td></tr>
+<tr><td>2011</td><td>50.7518%</td><td>100%</td><td>100%</td><td>57.5411%</td></tr>
+<tr><td>2012</td><td>52.8166%</td><td>100%</td><td>100%</td><td>59.9334%</td></tr>
+<tr><td>2013</td><td>54.4002%</td><td>95%</td><td>95%</td><td>43.3997%</td></tr>
+<tr><td>2014</td><td>55.7335%</td><td>90%</td><td>90%</td><td>44.7021%</td></tr>
+</table>
+
+<p>For example, a home valued at $200,000 in 2014 would have a taxable value of 55.7335% x $200,000 or $111,467.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>What&#39;s a healthy mix of property classes?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Cities use tax revenue to provide essential services such as police and fire protection, roads, water and sewer to their residents.</p>
+
+<p>They also provide amenenties such as parks, libraries, and sports facilities.</p>
+
+<p>A tax base with a healthy mix of residential and non-residential property can mean more revenue available for amenities for two reasons:</p>
+
+<ol>
+<li>Non-residential property generally produces more per-capita tax revenue</li>
+<li>Commercial and industrial property is subject to lower &quot;rollbacks&quot;</li>
+</ol>
+
+<p style="font-size: 14px">Caveat: Non-residential property still requires police, fire, roads, water, sewer, and other services.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Is Polk City too dependent on residential property?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Polk City&#39;s tax base looks like this:</p>
+
+<p><img src="assets/img/polk-city-tax-base.png" alt="Polk City tax base"></p>
+
+<p>As a resident of Polk City, I wondered how we compared to other nearby cities.</p>
+
+<p><a href="https://davidbody.shinyapps.io/polk-city-tax-base">Click here to see how Polk City compares to other cities in Polk County</a></p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -72,14 +132,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Introduction'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Why does property classification matter?'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What&#39;s a healthy mix of property classes?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Is Polk City too dependent on residential property?'>
+         4
       </a>
     </li>
   </ul>

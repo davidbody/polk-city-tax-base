@@ -1,5 +1,5 @@
 ---
-title       : Is Polk City's tax base too dependent on residential property?
+title       : Is Polk City too dependent on residential property?
 subtitle    : Course project for Developing Data Products
 author      : David W. Body
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -10,12 +10,61 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## Introduction
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+Iowa municipalities derive a significant portion of their income from property taxes levied on real property.
 
---- .class #id
+For property tax purposes, property is classified as one of:
 
-## Slide 2
+* Residential
+* Commericial
+* Industrial
+* Agricultural
+
+This project presents a way to compare the property tax bases of cities in Polk County, Iowa.
+
+---
+
+## Why does property classification matter?
+
+In Iowa, property other than agricultural property is assessed at 100% of market value, and agricultural property is assessed at 100% of productivity and net earning capacity value.
+
+However, the value that is actually taxed is determined after applying "rollbacks" which vary over time and by property class. Here are the rollbacks for the 5 most recent years available.
+
+<table>
+<tr><th>Year</th><th>Residential</th><th>Commercial</th><th>Industrial</th><th>Agricultural</th></tr>
+<tr><td>2010</td><td>48.5299%</td><td>100%</td><td>100%</td><td>69.0152%</td></tr>
+<tr><td>2011</td><td>50.7518%</td><td>100%</td><td>100%</td><td>57.5411%</td></tr>
+<tr><td>2012</td><td>52.8166%</td><td>100%</td><td>100%</td><td>59.9334%</td></tr>
+<tr><td>2013</td><td>54.4002%</td><td>95%</td><td>95%</td><td>43.3997%</td></tr>
+<tr><td>2014</td><td>55.7335%</td><td>90%</td><td>90%</td><td>44.7021%</td></tr>
+</table>
+
+For example, a home valued at $200,000 in 2014 would have a taxable value of 55.7335% x $200,000 or $111,467.
+
+---
+
+## What's a healthy mix of property classes?
+
+Cities use tax revenue to provide essential services such as police and fire protection, roads, water and sewer to their residents.
+
+They also provide amenenties such as parks, libraries, and sports facilities.
+
+A tax base with a healthy mix of residential and non-residential property can mean more revenue available for amenities for two reasons:
+
+1. Non-residential property generally produces more per-capita tax revenue
+2. Commercial and industrial property is subject to lower "rollbacks"
+
+<p style="font-size: 14px">Caveat: Non-residential property still requires police, fire, roads, water, sewer, and other services.</p>
+
+---
+
+## Is Polk City too dependent on residential property?
+
+Polk City's tax base looks like this:
+
+![Polk City tax base](assets/img/polk-city-tax-base.png)
+
+As a resident of Polk City, I wondered how we compared to other nearby cities.
+
+[Click here to see how Polk City compares to other cities in Polk County](https://davidbody.shinyapps.io/polk-city-tax-base)
