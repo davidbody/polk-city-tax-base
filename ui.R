@@ -1,5 +1,7 @@
 library(shiny)
 
+source("server.R")
+
 shinyUI(fluidPage(
     titlePanel("Assessed Property Values in Polk County, Iowa"),
     mainPanel(
