@@ -16,7 +16,9 @@ shinyUI(fluidPage(
             p("Data source:", a(href='http://web.assess.co.polk.ia.us/cgi-bin/web/tt/infoqry.cgi?tt=reconcile/reconcile_all', "Polk County Assessor")),
             p("Includes only property located in Polk County."),
             p("Starting in 2015, residential includes residential and multiresidential.")
-            )
+            ),
+        p("A slide deck with some background information is availble here:", a(href='https://davidbody.github.io/polk-city-tax-base/pitch', "davidbody.github.io/polk-city-tax-base/pitch")),
+        p("Source code is here:", a(href='https://github.com/davidbody/polk-city-tax-base', "github.com/davidbody/polk-city-tax-base"))
         )
     )
 )
