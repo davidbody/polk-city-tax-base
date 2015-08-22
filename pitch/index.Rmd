@@ -12,7 +12,9 @@ knit        : slidify::knit2slides
 
 ## Introduction
 
-Iowa municipalities derive a significant portion of their income from property taxes levied on real property.
+I live in Polk City, Iowa, US, a town of about 4,000 people in Polk County in central Iowa.
+
+Iowa municipalities derive a significant portion of their income from property taxes levied on real property. (Polk City also receives significant revenue from a local option sales tax.)
 
 For property tax purposes, property is classified as one of:
 
@@ -21,7 +23,7 @@ For property tax purposes, property is classified as one of:
 * Industrial
 * Agricultural
 
-This project presents a way to compare the property tax bases of cities in Polk County, Iowa.
+I was curious about how Polk City's property tax base compares to other nearby cities.
 
 ---
 
@@ -42,20 +44,20 @@ However, the value that is actually taxed is determined after applying "rollback
 
 For example, a home valued at $200,000 in 2014 would have a taxable value of 55.7335% x $200,000 or $111,467.
 
+Source: [Iowa Department of Revenue](https://tax.iowa.gov/equalization-and-rollbacks)
+
 ---
 
 ## What's a healthy mix of property classes?
 
-Cities use tax revenue to provide essential services such as police and fire protection, roads, water and sewer to their residents.
-
-They also provide amenenties such as parks, libraries, and sports facilities.
+Cities use tax revenue to provide essential services such as police and fire protection, roads, water and sewer to their residents. They also provide amenenties such as parks, libraries, and sports facilities.
 
 A tax base with a healthy mix of residential and non-residential property can mean more revenue available for amenities for two reasons:
 
-1. Non-residential property generally produces more per-capita tax revenue
+1. Non-residential property generally produces more tax revenue because it doesn't increase population
 2. Commercial and industrial property is subject to lower "rollbacks"
 
-<p style="font-size: 14px">Caveat: Non-residential property still requires police, fire, roads, water, sewer, and other services.</p>
+<p style="font-size: 16px">Caveat: Non-residential property still requires police, fire, roads, water, sewer, and other services.</p>
 
 ---
 
@@ -63,8 +65,8 @@ A tax base with a healthy mix of residential and non-residential property can me
 
 Polk City's tax base looks like this:
 
-![Polk City tax base](assets/img/polk-city-tax-base.png)
+<img src="assets/img/polk-city-tax-base.png" alt="Polk City tax base" height=300/>
 
 As a resident of Polk City, I wondered how we compared to other nearby cities.
 
-[Click here to see how Polk City compares to other cities in Polk County](https://davidbody.shinyapps.io/polk-city-tax-base)
+[Click here to see what I found out.](https://davidbody.shinyapps.io/polk-city-tax-base)
