@@ -42,7 +42,7 @@ However, the value that is actually taxed is determined after applying "rollback
 <tr><td>2014</td><td>55.7335%</td><td>90%</td><td>90%</td><td>44.7021%</td></tr>
 </table>
 
-For example, a home valued at $200,000 in 2014 would have a taxable value of 55.7335% x $200,000 or $111,467.
+For example, a home valued at $200,000 in 2014 would have a taxable value of 55.7335% x $200,000 or <span class="highlight" title="Computed by R">`r paste("$",format(.557335 * 200000, big.mark=","),sep="")`</span>.
 
 Source: [Iowa Department of Revenue](https://tax.iowa.gov/equalization-and-rollbacks)
 

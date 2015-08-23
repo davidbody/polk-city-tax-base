@@ -372,3 +372,11 @@ em {
 strong {
   font-weight: bold;
 }
+
+.highlight {
+  border: 1px dotted green;
+}
+
+.highlight:hover {
+  background-color: gold;
+}
