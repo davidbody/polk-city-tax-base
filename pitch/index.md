@@ -1,5 +1,5 @@
 ---
-title       : Is Polk City too dependent on residential property?
+title       : Does Polk City have a healthy property tax base?
 subtitle    : Course project for Developing Data Products
 author      : David W. Body
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -23,7 +23,7 @@ For property tax purposes, property is classified as one of:
 * Industrial
 * Agricultural
 
-I was curious about how Polk City's property tax base compares to other nearby cities.
+I was curious about how Polk City's property tax base compares to other cities in Polk County.
 
 ---
 
@@ -31,7 +31,7 @@ I was curious about how Polk City's property tax base compares to other nearby c
 
 In Iowa, property other than agricultural property is assessed at 100% of market value, and agricultural property is assessed at 100% of productivity and net earning capacity value.
 
-However, the value that is actually taxed is determined after applying "rollbacks" which vary over time and by property class. Here are the rollbacks for the 5 most recent years available.
+However, the value that is actually taxed is determined after applying "rollbacks" which vary over time and by property class. Here are the rollbacks for the 5 most recent years available. These apply statewide.
 
 <table>
 <tr><th>Year</th><th>Residential</th><th>Commercial</th><th>Industrial</th><th>Agricultural</th></tr>
@@ -50,14 +50,14 @@ Source: [Iowa Department of Revenue](https://tax.iowa.gov/equalization-and-rollb
 
 ## What's a healthy mix of property classes?
 
-Cities use tax revenue to provide essential services such as police and fire protection, roads, water and sewer to their residents. They also provide amenities such as parks, libraries, and sports facilities.
+Cities use tax revenue to provide essential services such as police and fire protection, streets and sidewalks, water and sewer and other services to their residents. They also provide amenities such as parks, libraries, and sports facilities.
 
 A tax base with a healthy mix of residential and non-residential property can mean more revenue available for amenities for two reasons:
 
-1. Non-residential property generally produces more tax revenue because it doesn't increase population
-2. Commercial and industrial property is subject to lower "rollbacks"
+1. Non-residential property generally produces more tax revenue per capita because it doesn't increase population
+2. Commercial and industrial property is subject to lower "rollbacks" therefore effectively taxed at higher rates
 
-<p style="font-size: 16px">Caveat: Non-residential property still requires police, fire, roads, water, sewer, and other services.</p>
+<p style="font-size: 16px">Caveat: Non-residential property still requires police, fire, streets, water, sewer, and other services.</p>
 
 ---
 
