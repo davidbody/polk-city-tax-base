@@ -364,3 +364,11 @@ pre code {
 .title-slide hgroup > h2 {
   color: #535E43 ;  /* ; #EF5150*/
 }
+
+/* added by DWB */
+em {
+  font-style: italic
+}
+strong {
+  font-weight: bold;
+}
