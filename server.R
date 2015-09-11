@@ -37,9 +37,18 @@ plotCity <- function(city) {
     g
 }
 
+getTable <- function(city) {
+  table <- prop_vals[prop_vals$city == city, -1]
+  table[, 2:6] <- sapply(table[, 2:6], FUN=function(x) prettyNum(x, big.mark = ","))
+  table
+}
+
 shinyServer(
     function(input, output) {
         output$city <- renderPrint({input$city})
         output$plot <- renderPlot({plotCity(input$city)})
+        output$table <- renderTable(getTable(input$city),
+                                    include.rownames = FALSE,
+                                    align = c("", "l", "r", "r", "r", "r", "r"))
     }
 )

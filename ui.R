@@ -9,8 +9,10 @@ shinyUI(fluidPage(
         p("Is Polk City's property tax base too dependent on residential property?"),
         p("See how Polk City's tax base compares to other cities in Polk County."),
         selectInput("city", "Select a City:", choices = cities(prop_vals), selected = "Polk City"),
-        plotOutput("plot"),
-        p('Percentages on the charts are residential property as a percentage of total valuation.'),
+        tabsetPanel(type = "tabs",
+            tabPanel("Plot", plotOutput("plot"), p('Percentages on the charts are residential property as a percentage of total valuation.')),
+            tabPanel("Table", tableOutput("table"))
+        ),
         wellPanel(
             p("Notes:"),
             p("Data source:", a(href='http://web.assess.co.polk.ia.us/cgi-bin/web/tt/infoqry.cgi?tt=reconcile/reconcile_all', "Polk County Assessor")),
